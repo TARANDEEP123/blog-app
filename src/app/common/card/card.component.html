@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar [style.background-image]="'url('+blog.file+')'" class="example-header-image col-1"></div>
+    <div class="col-6">
+      <mat-card-title>{{blog.name}}</mat-card-title>
+
+      <mat-card-subtitle>
+        {{blog.type_2}}-{{blog.type}}
+      </mat-card-subtitle>
+    </div>
+
+    <div class="col-5" style="display: inline-block; padding-left: 5px; padding-right: 5px;"><app-star-rating [rating] = "blog.rating"></app-star-rating></div>
+
+  </mat-card-header>
+  <img mat-card-image [src]="blog.file" alt="Photo of a Shiba Inu" width="100" height="300" >
+  <mat-card-content>
+    <p>
+      {{blog.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+ <button mat-icon-button color="primary">
+        <a [routerLink]="['edit/', blog.id]"><mat-icon>edit</mat-icon></a>
+  </button>
+  <button mat-icon-button color="warn">
+        <a (click)="deleteBlog(blog.id)"><mat-icon>delete</mat-icon></a>
+  </button>
+  </mat-card-actions>
+</mat-card>

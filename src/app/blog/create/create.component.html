@@ -1,0 +1,55 @@
+ <div class="container">
+   <div class="box-shadow">
+      <h2 class="heading">Create Blog</h2>
+        <mat-card>
+          <form [formGroup]="blogForm" style="margin-bottom: 10px;">
+                <mat-form-field class ="p5" apperance = "outline">
+                  <input matInput formControlName="name" placeholder="Name"   required/>
+                </mat-form-field>
+
+                <mat-form-field class =" form-field p5 dropdown" appearance="outline">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="type">
+                      <mat-option>Please Select</mat-option>
+                      <mat-option value="NV">Non Veg</mat-option>
+                      <mat-option value="V">Veg</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class ="form-field p5 dropdown" appearance="outline">
+                    <mat-label>Type2</mat-label>
+                    <mat-select formControlName="type_2">
+                      <mat-option>Please Select</mat-option>
+                      <mat-option value="chinese">Chinese</mat-option>
+                      <mat-option value="indian">Indian</mat-option>
+                      <mat-option value="italian">Italian</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+              <mat-form-field  class ="form-field p5" apperance = "outline">
+                <input matInput placeholder="Rating" formControlName="rating"  required/>
+              </mat-form-field>
+
+
+              <mat-form-field class="form-field">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+              <section [ngClass]="imageURL == '' ? 'm5':'m3'" apperance = "outline">
+                  <input  class="form-control" type="file"
+                  (change)="onChange($event)">
+              </section>
+              <div  class ="m5" *ngIf="imageURL && imageURL != ''">
+                  <img [src]="imageURL" class="imagePreview">
+              </div>
+
+            <button mat-raised-button [disabled]="!this.blogForm.valid" (click)="handleBlogForm()" color="primary">Create</button>
+
+          </form>
+
+        </mat-card>
+   </div>
+
+
+ </div>
+

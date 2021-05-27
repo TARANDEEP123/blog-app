@@ -1,0 +1,10 @@
+<button mat-raised-button color="primary"  style="align-items: left;"><a style="color: white;" routerLink="/blog/create">Add New Blog</a></button>
+<div class="row">
+  <div class="col-4" *ngFor="let blog of dataSource" >
+    <app-card [blog]="blog"></app-card>
+  </div>
+<!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[2, 10, 25, 100]">
+</mat-paginator> -->
+</div>
