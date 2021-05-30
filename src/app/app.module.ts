@@ -18,6 +18,7 @@ import { CardComponent } from './common/card/card.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StarRatingComponent } from './common/star-rating/star-rating.component';
 import { FileUploadComponent } from './common/file-upload/file-upload.component';
+import { ContactComponent } from './common/contact/contact.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FileUploadComponent } from './common/file-upload/file-upload.component'
     SignupComponent,
     BlogComponent,
     CardComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

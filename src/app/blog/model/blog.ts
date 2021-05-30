@@ -5,6 +5,6 @@ export interface blog {
   type: string; //veg/nonveg
   rating: number;
   type_2: string; //italian/chinese
-  file?: string
+  file?: any;
 
 }

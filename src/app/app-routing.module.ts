@@ -1,3 +1,4 @@
+import { ContactComponent } from './common/contact/contact.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,9 @@ import { AuthGuard } from './auth.guard';
 const routes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: '', component: SignupComponent },
-    {path:'blog' , loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),}
+    {path:'blog' , loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),},
+    { path: 'contact', component: ContactComponent },
+
 
 
 

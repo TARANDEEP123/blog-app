@@ -14,7 +14,8 @@ export class CardComponent implements OnInit {
   constructor(private router:Router, private toster:ToastrService, private blogService:BlogService) { }
 
   ngOnInit(): void {
-    console.log(this.blog);
+    console.log(this.blog.file);
+    this.blog.file = `http://localhost/blog-backend/public/${this.blog.file}`;
   }
 
   deleteBlog(id:number) :void {
