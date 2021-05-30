@@ -1,0 +1,31 @@
+ <div class="container">
+   <div class="box-shadow">
+      <h2 class="heading">Contact Us</h2>
+        <mat-card>
+          <form [formGroup]="contactForm" style="margin-bottom: 10px;">
+                <mat-form-field class ="p5" apperance = "outline">
+                  <input matInput formControlName="name" placeholder="Name"   required/>
+                </mat-form-field>
+
+
+
+              <mat-form-field  class ="form-field p5" apperance = "outline">
+                <input matInput placeholder="Email" formControlName="email"  required/>
+              </mat-form-field>
+
+
+              <mat-form-field class="form-field">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" placeholder="Ex. It makes me feel..."></textarea>
+              </mat-form-field>
+
+            <button mat-raised-button (click)="processForm()"  color="primary">Send</button>
+
+          </form>
+
+        </mat-card>
+   </div>
+
+
+ </div>
+
